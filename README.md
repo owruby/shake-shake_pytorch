@@ -1,6 +1,6 @@
 # Shake-Shake regularization
 PyTorch implementation of shake-shake regularization.
-Author implementations is [here](https://github.com/xgastaldi/shake-shake)
+Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 
 ## Dependencies
 - python 3.5
@@ -18,7 +18,7 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake)
 ### CIFAR-100
 |Model|Method|This implemnetaion |Paper|
 |:---:|:---:|:---:|:---:|
-|ResNeXt29-2x4x64d|S-S-I|comming soon|84.03|
+|ResNeXt29-2x4x64d|S-S-I|WIP|84.03|
 
 ## Train ResNet26-2x64d for CIFAR-10
 ```

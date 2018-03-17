@@ -12,19 +12,22 @@ from tqdm import tqdm
 
 import utils
 from datasets import load_dataset
-from models import ShakeResNet
+from models import ShakeResNet, ShakeResNeXt
 
 
 def main(args):
     train_loader, test_loader = load_dataset(args.label, args.batch_size)
-    model = ShakeResNet(args.depth, args.w_base, args.label)
+    if args.label == 10:
+        model = ShakeResNet(args.depth, args.w_base, args.label)
+    else:
+        model = ShakeResNeXt(args.depth, args.w_base, args.cardinary, args.label)
     model = torch.nn.DataParallel(model).cuda()
     cudnn.benckmark = True
 
     opt = optim.SGD(model.parameters(),
                     lr=args.lr,
                     momentum=0.9,
-                    weight_decay=0.0001,
+                    weight_decay=args.weight_decay,
                     nesterov=True)
     loss_func = nn.CrossEntropyLoss().cuda()
 
@@ -71,8 +74,10 @@ if __name__ == "__main__":
     # For Networks
     parser.add_argument("--depth", type=int, default=26)
     parser.add_argument("--w_base", type=int, default=64)
+    parser.add_argument("--cardinary", type=int, default=4)
     # For Training
     parser.add_argument("--lr", type=float, default=0.1)
+    parser.add_argument("--weight_decay", type=float, default=0.0001)
     parser.add_argument("--epochs", type=int, default=1800)
     parser.add_argument("--batch_size", type=int, default=128)
     args = parser.parse_args()
