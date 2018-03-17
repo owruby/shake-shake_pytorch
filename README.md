@@ -9,16 +9,16 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 ## Implemented Accuracy
 
 ### CIFAR-10
-|Model|Method|This implemnetaion |Paper|
+|Model|Method|This implementaion |Paper|
 |:---:|:---:|:---:|:---:|
 |ResNet26-2x64|S-S-I|97.07|97.02|
 
 ![CIFAR-10](checkpoint/cifar10.png)
 
 ### CIFAR-100
-|Model|Method|This implemnetaion |Paper|
+|Model|Method|This implementaion |Paper|
 |:---:|:---:|:---:|:---:|
-|ResNeXt29-2x4x64d|S-S-I|WIP|84.03|
+|ResNeXt29-2x4x64d|S-S-I|TODO|84.03|
 
 ## Train ResNet26-2x64d for CIFAR-10
 ```
