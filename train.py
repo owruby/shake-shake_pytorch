@@ -28,7 +28,7 @@ def main(args):
                     lr=args.lr,
                     momentum=0.9,
                     weight_decay=args.weight_decay,
-                    nesterov=True)
+                    nesterov=False)
     loss_func = nn.CrossEntropyLoss().cuda()
 
     headers = ["Epoch", "LearningRate", "TrainLoss", "TestLoss", "TrainAcc.", "TestAcc."]

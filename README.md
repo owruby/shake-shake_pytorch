@@ -11,6 +11,7 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 ### CIFAR-10
 |Model|Method|This implementaion |Paper|
 |:---:|:---:|:---:|:---:|
+|ResNet26-2x32|S-S-I|96.37|96.45|
 |ResNet26-2x64|S-S-I|97.07|97.02|
 
 ![CIFAR-10](checkpoint/cifar10.png)
