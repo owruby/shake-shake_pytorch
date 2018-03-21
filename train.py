@@ -28,7 +28,7 @@ def main(args):
                     lr=args.lr,
                     momentum=0.9,
                     weight_decay=args.weight_decay,
-                    nesterov=False)
+                    nesterov=args.nesterov)
     loss_func = nn.CrossEntropyLoss().cuda()
 
     headers = ["Epoch", "LearningRate", "TrainLoss", "TestLoss", "TrainAcc.", "TestAcc."]
@@ -78,6 +78,7 @@ if __name__ == "__main__":
     # For Training
     parser.add_argument("--lr", type=float, default=0.1)
     parser.add_argument("--weight_decay", type=float, default=0.0001)
+    parser.add_argument("--nesterov", type=bool, default=True)
     parser.add_argument("--epochs", type=int, default=1800)
     parser.add_argument("--batch_size", type=int, default=128)
     args = parser.parse_args()
