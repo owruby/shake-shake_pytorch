@@ -25,3 +25,10 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 ```
 python train.py --label 10 --depth 26 --w_base 64 --lr 0.1 --epochs 1800 --batch_size 64
 ```
+
+## References
+Gastaldi, Xavier. "Shake-Shake regularization."
+[arXiv:1705.07485v2](https://arxiv.org/abs/1705.07485)
+
+Gastaldi, Xavier. "Shake-Shake regularization of 3-branch residual networks."
+[ICLR2017 Workshop](https://openreview.net/forum?id=HkO-PCmYl)
