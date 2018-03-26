@@ -6,7 +6,7 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 - python 3.5
 - PyTorch 0.3.1
 
-## Implemented Accuracy
+## Accuracy
 
 ### CIFAR-10
 |Model|Method|This implementaion |Paper|
@@ -25,6 +25,16 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 ```
 python train.py --label 10 --depth 26 --w_base 64 --lr 0.1 --epochs 1800 --batch_size 64
 ```
+
+## Effects of learning epoch on accuracy
+|Model|Method|Epoch|This implementaion |Paper|
+|:---:|:---:|:---:|:---:|:---:|
+|ResNet26-2x64|S-S-I|300|96.46|-|
+|ResNet26-2x64|S-S-I|600|96.65|-|
+|ResNet26-2x64|S-S-I|900|96.78|-|
+|ResNet26-2x64|S-S-I|1200|TODO|-|
+|ResNet26-2x64|S-S-I|1500|TODO|-|
+|ResNet26-2x64|S-S-I|1800|97.07|97.02|
 
 ## References
 Gastaldi, Xavier. "Shake-Shake regularization."
