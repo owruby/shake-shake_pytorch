@@ -32,8 +32,8 @@ python train.py --label 10 --depth 26 --w_base 64 --lr 0.1 --epochs 1800 --batch
 |ResNet26-2x64|S-S-I|300|96.46|-|
 |ResNet26-2x64|S-S-I|600|96.65|-|
 |ResNet26-2x64|S-S-I|900|96.78|-|
-|ResNet26-2x64|S-S-I|1200|TODO|-|
-|ResNet26-2x64|S-S-I|1500|TODO|-|
+|ResNet26-2x64|S-S-I|1200|96.68|-|
+|ResNet26-2x64|S-S-I|1500|96.77|-|
 |ResNet26-2x64|S-S-I|1800|97.07|97.02|
 
 ## References
