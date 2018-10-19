@@ -69,7 +69,8 @@ class ShakeResNeXt(nn.Module):
         h = self.layer1(h)
         h = self.layer2(h)
         h = self.layer3(h)
-        h = F.relu(F.avg_pool2d(h, 8))
+        h = F.relu(h)
+        h = F.avg_pool2d(h, 8)
         h = h.view(-1, self.n_chs[3])
         h = self.fc_out(h)
         return h

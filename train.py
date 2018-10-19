@@ -46,8 +46,8 @@ def main(args):
             loss.backward()
             opt.step()
 
-            train_acc += utils.accuracy(y, t)
-            train_loss += loss.data[0] * t.size(0)
+            train_acc += utils.accuracy(y, t).item()
+            train_loss += loss.item() * t.size(0)
             train_n += t.size(0)
             bar.set_description("Loss: {:.4f}, Accuracy: {:.2f}".format(
                 train_loss / train_n, train_acc / train_n * 100), refresh=True)
@@ -57,12 +57,13 @@ def main(args):
         model.eval()
         test_loss, test_acc, test_n = 0, 0, 0
         for x, t in tqdm(test_loader, total=len(test_loader), leave=False):
-            x, t = Variable(x.cuda(), volatile=True), Variable(t.cuda(), volatile=True)
-            y = model(x)
-            loss = loss_func(y, t)
-            test_loss += loss.data[0] * t.size(0)
-            test_acc += utils.accuracy(y, t)
-            test_n += t.size(0)
+            with torch.no_grad():
+                x, t = Variable(x.cuda()), Variable(t.cuda())
+                y = model(x)
+                loss = loss_func(y, t)
+                test_loss += loss.item() * t.size(0)
+                test_acc += utils.accuracy(y, t).item()
+                test_n += t.size(0)
         logger.write(e+1, lr, train_loss / train_n, test_loss / test_n,
                      train_acc / train_n * 100, test_acc / test_n * 100)
 
