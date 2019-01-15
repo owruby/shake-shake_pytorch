@@ -34,8 +34,6 @@ def load_dataset(label, batch_size):
     test_loader = torch.utils.data.DataLoader(
         data_cls("./data/cifar{}".format(label), train=False, download=False,
                  transform=transforms.Compose([
-                     transforms.RandomCrop(32, padding=4),
-                     transforms.RandomHorizontalFlip(),
                      transforms.ToTensor(),
                      normalizer
                  ])),
