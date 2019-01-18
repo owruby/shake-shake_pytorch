@@ -4,7 +4,7 @@ Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 
 ## Dependencies
 - python 3.5
-- PyTorch 0.4.1
+- PyTorch 1.0.0
 
 ## Accuracy
 
