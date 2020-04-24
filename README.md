@@ -1,6 +1,5 @@
 # Shake-Shake regularization
 PyTorch implementation of shake-shake regularization.
-Author implementations is [here](https://github.com/xgastaldi/shake-shake).
 
 ## Dependencies
 - python 3.5
@@ -42,3 +41,6 @@ Gastaldi, Xavier. "Shake-Shake regularization."
 
 Gastaldi, Xavier. "Shake-Shake regularization of 3-branch residual networks."
 [ICLR2017 Workshop](https://openreview.net/forum?id=HkO-PCmYl)
+
+Author Implementation
+https://github.com/xgastaldi/shake-shake
